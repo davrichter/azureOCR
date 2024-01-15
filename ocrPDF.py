@@ -134,7 +134,7 @@ def ocr_page(pdf_page):
         pdf_canvas = canvas.Canvas(ocr_overlay, pagesize=(page_width, page_height))
 
         # Add image into PDF page
-        pdf_canvas.drawInlineImage(image_pages[page_id], 0, 0, width=page_width, height=page_height,
+        pdf_canvas.drawInlineImage(pdf_page, 0, 0, width=page_width, height=page_height,
                                    preserveAspectRatio=True)
 
         text = pdf_canvas.beginText()
